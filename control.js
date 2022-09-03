@@ -4,7 +4,8 @@ const imagen=document.createElement('img');
 const imagen2=document.createElement('img');
 const otro=document.querySelector('#gatonuevo');
 const otro2=document.querySelector('#gatonuevo2');
-function presionar(){
+
+/*function presionar(){
 
 imagen.setAttribute('src', 'https://sumedico.blob.core.windows.net/images/2021/06/09/comoalimentargatobebe.jpg');
 
@@ -17,4 +18,9 @@ function presionar2(){
     
     otro2.appendChild(imagen2);
     }
+    */
 
+    function azar(){
+
+        
+    }
