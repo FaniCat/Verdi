@@ -1,24 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gato bonito</title>
-    <link rel="stylesheet" href="./estilo.css">
+    <script>
+        // guardamos el id de la imagen visible
+        idImagenVisible="contenido1";
+        function mostrar(id)
+        {
+            // esconedemos la imagen visible
+            document.getElementById(idImagenVisible).style.display="none";
+            // mostramos la imagen seleccionada
+            document.getElementById(id).style.display="block";
+            // guardamos en la variable la imagen que estamos visualizando
+            idImagenVisible=id;
+        }
+    </script>
+    <style>
+        .oculto {display:none;}
+    </style>
 </head>
+ 
 <body>
-    <div id="titulo">
-        <h1>Verdolago Gato Panero</h1>
-    </div>
-    <h2 class="subtitulos">Descripción</h2>
-   <p>Gato vaquita</p>
-   <img src="https://www.feelcats.com/wp-content/uploads/2020/05/gatos-blanco-y-negro.jpg" alt="">
-   <br> 
-   <button id="btn" onclick="presionar()">Miau para otro gatito aqui abajo :)</button>
-   <p id="gatonuevo"></p>
-<p>vida de gatos</p>
-  
-   <script src="./control.js"></script>
+ 
+<form>
+    <input type="button" onclick="mostrar('contenido1')" value="Mostrar/ocultar contenido 1">
+    <input type="button" onclick="mostrar('contenido2')" value="Mostrar/ocultar contenido 2">
+   
+</form>
+<img src="https://sumedico.blob.core.windows.net/images/2021/06/09/comoalimentargatobebe.jpg" id="contenido1">
+<img src="https://statics.memondo.com/p/99/cfs/2014/02/CF_9316_347a0a81ac314844bd8f159ac4379aea_gatos_el_gato_vaca_no_esta_para_bromas_thumb_fb.jpg?cb=4937626" class="oculto" id="contenido2">
+
+ 
 </body>
 </html>
